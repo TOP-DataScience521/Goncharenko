@@ -23,7 +23,7 @@ try:
 except ValueError:
     print("не является числом")
 else:
-        if value % 2 == 0 and value != 6:
+        if 0 < value % 2 == 0 and value != 6:
           print("да")
         else:
           print("нет")
@@ -37,4 +37,7 @@ else:
 # не является числом
 
 # введите цифру больше нуля 5
+# нет
+
+# введите цифру больше нуля -8
 # нет
