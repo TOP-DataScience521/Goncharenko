@@ -24,18 +24,37 @@
 tree = [[[['leaf', 'leaf', 'leaf', 'leaf'], 'leaf', 'leaf', 'leaf'], [['leaf', 'leaf'], 'leaf', 'leaf'], ['leaf', 'leaf', 'leaf']],
  [['leaf', 'leaf'], ['leaf', 'leaf', 'leaf', 'leaf', 'leaf', 'leaf'], 'leaf', 'leaf', 'leaf'], [['leaf'], ['leaf', 'leaf', ['leaf', 'leaf', 'leaf']], 'leaf', 'leaf'],
  ['leaf', 'leaf', ['leaf', 'leaf'], 'leaf']]
+ 
+# leaves_count = []
 
+# def tree_leaves(data):
+    # def count_leaves(data):
+       # global leaves_count
+       # for i in data:
+          # if isinstance(i, (set, list)):
+            # count_leaves(i)
+          # elif i == 'leaf':
+            # leaves_count.append(i)
+    
+    # count_leaves(data)
+    # print(f"Всего листьев: {len(leaves_count)}")
+
+# tree_leaves(tree)
+
+leaves_count = 0
 
 def tree_leaves(data):
-    result = []
+    def count_leaves(data):
+       global leaves_count
+       for i in data:
+          if isinstance(i, (set, list)):
+            count_leaves(i)
+          elif i == 'leaf':
+            leaves_count+=1
     
-    for i in data:
-        if type(i) in (tuple, list, dict, set):
-            result.extend(tree_leaves(i))     # тут выдает ошибку о неитерируемом объекте, не смог разобраться в этой ситуации, через ретёрн работает, а если применить len внутри функции то ошибка
-        elif i == "leaf":
-            result.append(i)
-    return result
+    count_leaves(data)
+    print(f"Всего листьев: {leaves_count}")
 
-print(len(tree_leaves(tree)))
+tree_leaves(tree)
 
 # 38

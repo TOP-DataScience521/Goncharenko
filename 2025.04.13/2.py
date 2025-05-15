@@ -21,7 +21,7 @@ def deck():
 
     for suit in suits:
         for card in cards_denom:
-            yield (card, suit)      
+            return (card, suit)      
 
 
 print(list(deck())[::13])
