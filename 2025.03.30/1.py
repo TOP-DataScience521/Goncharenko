@@ -60,3 +60,28 @@ else:
 
 # введите эл.почту - asdasdasd.ru
 # нет
+
+
+
+# def carent_password():
+#     # data = input("enter mail - ")
+#     data = "awdawd@ada.aad.su"
+    
+#     if "@" and "." in data:
+#         # partition возвращает 3 части списка, до указанного разделителя, сам разделитель и то что после разделителя
+#         x = data.partition("@")  
+#         part1 = x[0]
+#         part2 = x[2].split(".")
+#         # разбив на части электронный адрес сможем проверить каждую его часть при необходимости
+#         domen = part2[-1]
+#         if domen in high_domains:
+#             print("da")
+#         else:
+#            print("no")
+#     else:
+#         print("no")
+#     print(part1)
+#     print(part2)
+#     print(domen)
+        
+# carent_password()
